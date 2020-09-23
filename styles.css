@@ -1,0 +1,47 @@
+#sideBar{
+    width:20vh;
+    height:100vh;
+    background-color: black;
+    color:white;
+    float:left;
+    margin-right:20px;
+}
+#todo{
+    background-color:white;
+    margin:auto;
+    width:50%;
+    height:60vh;
+    padding: 5%;
+    border-radius: 5%;
+    box-shadow:2px 2px black;
+}
+body{
+    margin:0;
+    background-color:#f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+}
+svg:hover{
+    background-color: black;
+    color:white;
+}
+#sideBar span{
+    cursor:pointer;
+}
+span+div{
+    margin:10%;
+}
+ul{
+    margin-top:30px;
+    list-style: none;
+}
+li{
+    margin:10px auto;
+    cursor:pointer;
+}
+#sideBar li{
+    padding:5%;
+}
+.white{
+    background-color: white;
+    color:black;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alpine Demo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    </head>
+    <body x-data="{sidebarOpen:false, tab:'first'}">
+        <div id="sideBar" x-show="sidebarOpen" @click.away="sidebarOpen=false">
+            <span @click="sidebarOpen=false">x</span>
+            <div>
+                <h3>Options</h3>
+                <ul>
+                    <li @click="tab='first'" :class="{'white':tab==='first'}">Todo List</li>
+                    <li @click="tab='second'" :class="{'white':tab==='second'}">Article</li>
+                    <li @click="tab='third'" :class="{'white':tab==='third'}">Image</li>
+                </ul>
+            </div>
+        </div>
+        <span @click="sidebarOpen=true">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
+            </svg>
+        </span>
+        <div class="content">
+            <div id="todo" x-show="tab==='first'">
+                <h3>Todos</h3>
+                <ul id="todoList">
+                    <li><input type="checkbox"> Dog</li>
+                    <li><input type="checkbox"> Cat</li>
+                    <li><input type="checkbox"> Pigeon</li>
+                    <li><input type="checkbox"> Parrot</li>
+                    <li><input type="checkbox"> Crow</li>
+                </ul>
+            </div>
+            <div x-show="tab==='second'">
+                <h1>The Sample Text Of The Century</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eligendi recusandae quaerat excepturi inventore unde dolore cumque animi quasi. Blanditiis quia eveniet sint nobis perspiciatis facilis asperiores exercitationem, quisquam magnam velit porro ad nisi quos sequi inventore dicta deleniti esse expedita optio provident nihil illum dolorum quaerat. Dolorem, quod! Eum, vel ea? Ullam blanditiis mollitia soluta optio fuga doloremque, sequi odit ex. Fugit, vitae. Vero, nihil eum tempora officiis perferendis alias? Aspernatur porro nulla placeat obcaecati neque atque iusto animi dicta nobis assumenda ab eveniet fuga a eaque vitae ducimus, ut tenetur esse, laborum labore reprehenderit molestiae voluptatum sint maxime?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus possimus quod ratione, impedit minus distinctio, in accusantium perspiciatis maiores illo quasi eos laborum et quidem consequatur. Quis ea facilis dignissimos dolor molestias harum vel fuga rerum ipsam deserunt, veniam earum, officia rem autem incidunt animi libero, illo ipsa odio doloremque! Recusandae sed quos vel illo? Modi sint ipsam odio culpa error exercitationem est animi dicta perspiciatis, corrupti iste obcaecati sed velit illo laborum unde labore in quae saepe inventore voluptate incidunt ipsa. A, nesciunt nulla incidunt veritatis culpa et dolor optio dolores explicabo fugiat consectetur ea repellat, sit dignissimos autem sunt aperiam illum cumque praesentium quae deserunt eveniet quo, quaerat laborum. Voluptatem, vel dolores quia earum modi, eaque assumenda minus fugit nihil non libero tenetur obcaecati fugiat officia quam eligendi distinctio? Similique itaque inventore officiis porro fugit labore tempora fugiat, assumenda reiciendis, sint facere. Eum, commodi fugit mollitia excepturi ullam obcaecati cupiditate ipsa quos dolor nihil recusandae voluptate distinctio saepe quod ratione rerum dolorum odio officiis quisquam consequuntur nisi, maxime incidunt. Vitae accusantium harum sint, sequi voluptate temporibus a. Iste vitae numquam repellendus atque quibusdam pariatur minima cupiditate voluptate. Reiciendis, excepturi cum iste dolorem nulla autem odio quisquam consectetur? Aspernatur necessitatibus placeat quas doloribus omnis sint blanditiis perspiciatis, odit, ea, consequuntur sed voluptates exercitationem magni ipsa iusto nihil similique quaerat eaque asperiores? Doloremque omnis laborum provident illo voluptas. Minus eaque fugiat libero laudantium omnis, labore doloremque quaerat dicta quisquam, maiores voluptas, quasi accusamus odio quos rerum at reprehenderit. Veritatis velit, commodi neque esse voluptatibus suscipit omnis assumenda saepe, accusamus laboriosam quibusdam eveniet tenetur deleniti, consectetur tempora! Ad aperiam exercitationem culpa saepe rerum. Neque culpa veritatis soluta. Earum maxime esse tempore a reiciendis. Eligendi minima cumque nulla sapiente nisi voluptatem non doloribus id voluptatibus adipisci ipsum architecto suscipit nesciunt reiciendis totam facilis labore, dolorum a? Ea omnis sunt iure voluptatum eos maxime! Accusantium ab distinctio ex asperiores omnis et ad sed rerum. Illum sit cupiditate consectetur accusamus minima deleniti ratione nostrum magnam explicabo, vitae non id? Cumque id debitis neque accusantium architecto doloribus inventore eum dolor officia pariatur molestiae assumenda libero, reprehenderit nobis distinctio rem temporibus asperiores voluptas delectus eos velit voluptate ex numquam? Provident autem porro a ducimus voluptate voluptates ut, accusantium eius illo cupiditate ipsum libero aperiam deleniti, hic beatae deserunt sit quae at maxime quia debitis quas vitae corrupti numquam? Voluptate animi recusandae et quo necessitatibus aut quidem.
+                </p> 
+            </div>
+            <div x-show="tab==='third'">
+                <h1>The Sample Image</h1>
+                <img src="https://images.unsplash.com/photo-1600721860729-d90ff446f6fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="sample image">
+            </div>
+        </div>
+    </body>
+</html>
